@@ -17,6 +17,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../navigation/RootNavigator';
 import { useLocalization } from '../../localization';
 import { SafeButton } from '../../core/components/SafeButton';
+import { LanguageSwitcher } from '../../core/components/LanguageSwitcher';
 import { colors, typography, spacing, borderRadius } from '../../core/theme';
 
 const { width } = Dimensions.get('window');
@@ -39,11 +40,21 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}
       >
+        {/* Language Switcher - Floating at top */}
+        <MotiView
+          from={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ type: 'spring', delay: 100 }}
+          style={styles.languageSwitcherContainer}
+        >
+          <LanguageSwitcher />
+        </MotiView>
+
         {/* Welcome Header */}
         <MotiView
           from={{ opacity: 0, translateY: -20 }}
           animate={{ opacity: 1, translateY: 0 }}
-          transition={{ type: 'timing', duration: 600 }}
+          transition={{ type: 'timing', duration: 600, delay: 200 }}
           style={styles.header}
         >
           <Text style={styles.greeting}>{getGreeting()}</Text>
@@ -204,6 +215,10 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     padding: spacing.lg,
+  },
+  languageSwitcherContainer: {
+    alignItems: 'center',
+    marginBottom: spacing.lg,
   },
   header: {
     alignItems: 'center',

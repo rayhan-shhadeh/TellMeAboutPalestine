@@ -61,7 +61,15 @@ export const GamesScreen: React.FC<GamesScreenProps> = ({ navigation }) => {
               <Text style={styles.gameName}>{game.name}</Text>
               <SafeButton
                 title={t.games.play}
-                onPress={() => {}}
+                onPress={() => {
+                  if (game.id === '4') {
+                    // Memory Game is implemented
+                    navigation.navigate('MemoryGame');
+                  } else {
+                    // Other games coming soon
+                    alert('Coming soon! 🎮');
+                  }
+                }}
                 size="small"
                 style={styles.playButton}
               />
