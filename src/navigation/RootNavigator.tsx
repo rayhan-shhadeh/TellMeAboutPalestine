@@ -13,6 +13,7 @@ import { StoriesScreen } from '../features/stories/StoriesScreen';
 import { GamesScreen } from '../features/games/GamesScreen';
 import { ProgressScreen } from '../features/home/ProgressScreen';
 import { ParentsScreen } from '../features/parents/ParentsScreen';
+import { MemoryGame } from '../features/games/MemoryGame';
 import { colors } from '../core/theme';
 
 export type RootStackParamList = {
@@ -21,6 +22,7 @@ export type RootStackParamList = {
   Facts: undefined;
   Stories: undefined;
   Games: undefined;
+  MemoryGame: undefined;
   Progress: undefined;
   Parents: undefined;
 };
@@ -77,6 +79,13 @@ export const RootNavigator: React.FC = () => {
           component={GamesScreen}
           options={{
             title: 'Games',
+          }}
+        />
+        <Stack.Screen
+          name="MemoryGame"
+          component={MemoryGame}
+          options={{
+            title: 'Memory Game',
           }}
         />
         <Stack.Screen

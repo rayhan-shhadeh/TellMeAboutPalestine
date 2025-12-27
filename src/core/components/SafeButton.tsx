@@ -14,6 +14,7 @@ import {
   PressableProps,
 } from 'react-native';
 import { MotiView } from 'moti';
+import * as Haptics from 'expo-haptics';
 import { colors, typography, spacing, borderRadius, shadows } from '../theme';
 
 interface SafeButtonProps extends Omit<PressableProps, 'style'> {
@@ -81,8 +82,16 @@ export const SafeButton: React.FC<SafeButtonProps> = ({
     }
   };
 
+  const handlePress = () => {
+    // Add satisfying haptic feedback
+    if (!disabled) {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    }
+    onPress();
+  };
+
   return (
-    <Pressable onPress={onPress} disabled={disabled} {...props}>
+    <Pressable onPress={handlePress} disabled={disabled} {...props}>
       {({ pressed }) => (
         <MotiView
           style={[getButtonStyle(), style]}

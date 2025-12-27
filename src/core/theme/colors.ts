@@ -5,22 +5,29 @@
  */
 
 export const colors = {
-  // Primary colors
-  oliveGreen: '#6B8E23',
-  oliveGreenLight: '#8FBC3F',
-  oliveGreenDark: '#556B2F',
+  // Primary colors - Enhanced with more vibrant tones
+  oliveGreen: '#7CB342',
+  oliveGreenLight: '#9CCC65',
+  oliveGreenDark: '#558B2F',
 
-  skyBlue: '#87CEEB',
-  skyBlueLight: '#B0E0E6',
-  skyBlueDark: '#4A90A4',
+  skyBlue: '#29B6F6',
+  skyBlueLight: '#4FC3F7',
+  skyBlueDark: '#0288D1',
 
-  warmBeige: '#F5DEB3',
-  warmBeigLight: '#FAEBD7',
-  warmBeigeDark: '#D2B48C',
+  warmBeige: '#FFD54F',
+  warmBeigLight: '#FFE082',
+  warmBeigeDark: '#FFA000',
 
-  softRed: '#FF6B6B',
-  softRedLight: '#FF8787',
-  softRedDark: '#E55454',
+  softRed: '#FF5252',
+  softRedLight: '#FF867F',
+  softRedDark: '#D32F2F',
+
+  // Vibrant accent colors for engaging UI
+  vibrantPurple: '#AB47BC',
+  vibrantOrange: '#FF9800',
+  vibrantPink: '#EC407A',
+  vibrantTeal: '#26A69A',
+  vibrantIndigo: '#5C6BC0',
 
   // Neutral colors
   white: '#FFFFFF',
