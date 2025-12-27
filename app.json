@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Tell Me About Palestine",
+    "slug": "tell-me-about-palestine",
+    "version": "1.0.0",
+    "description": "An educational app for children aged 6-12 to learn about Palestine through interactive stories, games, and fun facts.",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "primaryColor": "#6B8E23",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFEF7"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.palestine.education"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#6B8E23"
+      },
+      "package": "com.palestine.education",
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "supportedLanguages": ["en", "ar"],
+      "ageGroup": "6-12"
+    }
+  }
+}
